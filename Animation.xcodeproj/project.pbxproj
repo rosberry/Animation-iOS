@@ -7,53 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		OBJ_28 /* AnimationSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* AnimationSequence.swift */; };
-		OBJ_29 /* AnimationWrapper+Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* AnimationWrapper+Perform.swift */; };
-		OBJ_30 /* AnimationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* AnimationWrapper.swift */; };
-		OBJ_31 /* BaseAnimationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* BaseAnimationParameters.swift */; };
-		OBJ_32 /* BaseAnimationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* BaseAnimationWrapper.swift */; };
-		OBJ_33 /* SpringAnimationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* SpringAnimationParameters.swift */; };
-		OBJ_34 /* SpringAnimationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* SpringAnimationWrapper.swift */; };
-		OBJ_35 /* UIView+AnimationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* UIView+AnimationParameters.swift */; };
-		OBJ_42 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		01C2600028B4D664002828BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C25FFF28B4D664002828BE /* UIKit.framework */; };
+		OBJ_38 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Transition.swift */; };
+		OBJ_39 /* TransitionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* TransitionProvider.swift */; };
+		OBJ_40 /* UINavigationController+TransitionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* UINavigationController+TransitionProvider.swift */; };
+		OBJ_41 /* AnimationSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* AnimationSequence.swift */; };
+		OBJ_42 /* AnimationWrapper+Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* AnimationWrapper+Perform.swift */; };
+		OBJ_43 /* AnimationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* AnimationWrapper.swift */; };
+		OBJ_44 /* BaseAnimationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* BaseAnimationParameters.swift */; };
+		OBJ_45 /* BaseAnimationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* BaseAnimationWrapper.swift */; };
+		OBJ_46 /* SpringAnimationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* SpringAnimationParameters.swift */; };
+		OBJ_47 /* SpringAnimationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* SpringAnimationWrapper.swift */; };
+		OBJ_48 /* UIView+AnimationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* UIView+AnimationParameters.swift */; };
+		OBJ_59 /* Animation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "animation-ios::Animation::Product" /* Animation.framework */; };
+		OBJ_66 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		01C25FFD28B4D535002828BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "animation-ios::Animation";
+			remoteInfo = Animation;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		"Animation::Animation::Product" /* Animation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Animation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_10 /* AnimationSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationSequence.swift; sourceTree = "<group>"; };
-		OBJ_11 /* AnimationWrapper+Perform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimationWrapper+Perform.swift"; sourceTree = "<group>"; };
-		OBJ_12 /* AnimationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationWrapper.swift; sourceTree = "<group>"; };
-		OBJ_13 /* BaseAnimationParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimationParameters.swift; sourceTree = "<group>"; };
-		OBJ_14 /* BaseAnimationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimationWrapper.swift; sourceTree = "<group>"; };
-		OBJ_15 /* SpringAnimationParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimationParameters.swift; sourceTree = "<group>"; };
-		OBJ_16 /* SpringAnimationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimationWrapper.swift; sourceTree = "<group>"; };
-		OBJ_17 /* UIView+AnimationParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationParameters.swift"; sourceTree = "<group>"; };
-		OBJ_21 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		01C25FFF28B4D664002828BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		OBJ_10 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		OBJ_11 /* TransitionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionProvider.swift; sourceTree = "<group>"; };
+		OBJ_12 /* UINavigationController+TransitionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TransitionProvider.swift"; sourceTree = "<group>"; };
+		OBJ_14 /* AnimationSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationSequence.swift; sourceTree = "<group>"; };
+		OBJ_15 /* AnimationWrapper+Perform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimationWrapper+Perform.swift"; sourceTree = "<group>"; };
+		OBJ_16 /* AnimationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationWrapper.swift; sourceTree = "<group>"; };
+		OBJ_17 /* BaseAnimationParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimationParameters.swift; sourceTree = "<group>"; };
+		OBJ_18 /* BaseAnimationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimationWrapper.swift; sourceTree = "<group>"; };
+		OBJ_19 /* SpringAnimationParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimationParameters.swift; sourceTree = "<group>"; };
+		OBJ_20 /* SpringAnimationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimationWrapper.swift; sourceTree = "<group>"; };
+		OBJ_21 /* UIView+AnimationParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationParameters.swift"; sourceTree = "<group>"; };
+		OBJ_31 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		OBJ_32 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		"animation-ios::Animation::Product" /* Animation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Animation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"animation-ios::AnimationExample::Product" /* AnimationExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = AnimationExample; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_36 /* Frameworks */ = {
+		OBJ_49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		OBJ_58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_59 /* Animation.framework in Frameworks */,
+				01C2600028B4D664002828BE /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_18 /* Tests */ = {
+		01C25FFE28B4D664002828BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01C25FFF28B4D664002828BE /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		OBJ_13 /* UIView+Animations */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_14 /* AnimationSequence.swift */,
+				OBJ_15 /* AnimationWrapper+Perform.swift */,
+				OBJ_16 /* AnimationWrapper.swift */,
+				OBJ_17 /* BaseAnimationParameters.swift */,
+				OBJ_18 /* BaseAnimationWrapper.swift */,
+				OBJ_19 /* SpringAnimationParameters.swift */,
+				OBJ_20 /* SpringAnimationWrapper.swift */,
+				OBJ_21 /* UIView+AnimationParameters.swift */,
+			);
+			path = "UIView+Animations";
+			sourceTree = "<group>";
+		};
+		OBJ_26 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_19 /* Products */ = {
+		OBJ_27 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"Animation::Animation::Product" /* Animation.framework */,
+				"animation-ios::Animation::Product" /* Animation.framework */,
+				"animation-ios::AnimationExample::Product" /* AnimationExample */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -63,36 +117,51 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_18 /* Tests */,
-				OBJ_19 /* Products */,
-				OBJ_21 /* README.md */,
+				OBJ_26 /* Tests */,
+				OBJ_27 /* Products */,
+				OBJ_31 /* LICENSE */,
+				OBJ_32 /* README.md */,
+				01C25FFE28B4D664002828BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_10 /* AnimationSequence.swift */,
-				OBJ_11 /* AnimationWrapper+Perform.swift */,
-				OBJ_12 /* AnimationWrapper.swift */,
-				OBJ_13 /* BaseAnimationParameters.swift */,
-				OBJ_14 /* BaseAnimationWrapper.swift */,
-				OBJ_15 /* SpringAnimationParameters.swift */,
-				OBJ_16 /* SpringAnimationWrapper.swift */,
-				OBJ_17 /* UIView+AnimationParameters.swift */,
+				OBJ_8 /* Animation */,
 			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Transitions */,
+				OBJ_13 /* UIView+Animations */,
+			);
+			name = Animation;
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_9 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* Transition.swift */,
+				OBJ_11 /* TransitionProvider.swift */,
+				OBJ_12 /* UINavigationController+TransitionProvider.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		"Animation::Animation" /* Animation */ = {
+		"animation-ios::Animation" /* Animation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_23 /* Build configuration list for PBXNativeTarget "Animation" */;
+			buildConfigurationList = OBJ_34 /* Build configuration list for PBXNativeTarget "Animation" */;
 			buildPhases = (
-				OBJ_26 /* Sources */,
-				OBJ_36 /* Frameworks */,
+				OBJ_37 /* Sources */,
+				OBJ_49 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -100,14 +169,31 @@
 			);
 			name = Animation;
 			productName = Animation;
-			productReference = "Animation::Animation::Product" /* Animation.framework */;
+			productReference = "animation-ios::Animation::Product" /* Animation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		"Animation::SwiftPMPackageDescription" /* AnimationPackageDescription */ = {
+		"animation-ios::AnimationExample" /* AnimationExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_38 /* Build configuration list for PBXNativeTarget "AnimationPackageDescription" */;
+			buildConfigurationList = OBJ_51 /* Build configuration list for PBXNativeTarget "AnimationExample" */;
 			buildPhases = (
-				OBJ_41 /* Sources */,
+				OBJ_54 /* Sources */,
+				OBJ_58 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_60 /* PBXTargetDependency */,
+			);
+			name = AnimationExample;
+			productName = AnimationExample;
+			productReference = "animation-ios::AnimationExample::Product" /* AnimationExample */;
+			productType = "com.apple.product-type.tool";
+		};
+		"animation-ios::SwiftPMPackageDescription" /* AnimationPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_62 /* Build configuration list for PBXNativeTarget "AnimationPackageDescription" */;
+			buildPhases = (
+				OBJ_65 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +211,11 @@
 			attributes = {
 				LastSwiftMigration = 9999;
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"animation-ios::AnimationExample" = {
+						DevelopmentTeam = GPVA8JVMU3;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Animation" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -134,99 +225,62 @@
 				en,
 			);
 			mainGroup = OBJ_5;
-			productRefGroup = OBJ_19 /* Products */;
+			productRefGroup = OBJ_27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"Animation::Animation" /* Animation */,
-				"Animation::SwiftPMPackageDescription" /* AnimationPackageDescription */,
+				"animation-ios::Animation" /* Animation */,
+				"animation-ios::AnimationExample" /* AnimationExample */,
+				"animation-ios::SwiftPMPackageDescription" /* AnimationPackageDescription */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_26 /* Sources */ = {
+		OBJ_37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_28 /* AnimationSequence.swift in Sources */,
-				OBJ_29 /* AnimationWrapper+Perform.swift in Sources */,
-				OBJ_30 /* AnimationWrapper.swift in Sources */,
-				OBJ_31 /* BaseAnimationParameters.swift in Sources */,
-				OBJ_32 /* BaseAnimationWrapper.swift in Sources */,
-				OBJ_33 /* SpringAnimationParameters.swift in Sources */,
-				OBJ_34 /* SpringAnimationWrapper.swift in Sources */,
-				OBJ_35 /* UIView+AnimationParameters.swift in Sources */,
+				OBJ_38 /* Transition.swift in Sources */,
+				OBJ_39 /* TransitionProvider.swift in Sources */,
+				OBJ_40 /* UINavigationController+TransitionProvider.swift in Sources */,
+				OBJ_41 /* AnimationSequence.swift in Sources */,
+				OBJ_42 /* AnimationWrapper+Perform.swift in Sources */,
+				OBJ_43 /* AnimationWrapper.swift in Sources */,
+				OBJ_44 /* BaseAnimationParameters.swift in Sources */,
+				OBJ_45 /* BaseAnimationWrapper.swift in Sources */,
+				OBJ_46 /* SpringAnimationParameters.swift in Sources */,
+				OBJ_47 /* SpringAnimationWrapper.swift in Sources */,
+				OBJ_48 /* UIView+AnimationParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_41 /* Sources */ = {
+		OBJ_54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_42 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_66 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		OBJ_60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "animation-ios::Animation" /* Animation */;
+			targetProxy = 01C25FFD28B4D535002828BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		OBJ_24 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Animation.xcodeproj/Animation_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Animation;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Animation;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Animation.xcodeproj/Animation_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Animation;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Animation;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -247,21 +301,73 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		OBJ_39 /* Debug */ = {
+		OBJ_35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Animation.xcodeproj/Animation_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Animation;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Animation;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
+		};
+		OBJ_36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Animation.xcodeproj/Animation_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Animation;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Animation;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
 		};
 		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -280,18 +386,92 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
-		OBJ_40 /* Release */ = {
+		OBJ_52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GPVA8JVMU3;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TARGET_NAME = AnimationExample;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GPVA8JVMU3;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TARGET_NAME = AnimationExample;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -package-description-version 5.3.0";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -308,20 +488,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_23 /* Build configuration list for PBXNativeTarget "Animation" */ = {
+		OBJ_34 /* Build configuration list for PBXNativeTarget "Animation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_24 /* Debug */,
-				OBJ_25 /* Release */,
+				OBJ_35 /* Debug */,
+				OBJ_36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_38 /* Build configuration list for PBXNativeTarget "AnimationPackageDescription" */ = {
+		OBJ_51 /* Build configuration list for PBXNativeTarget "AnimationExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_39 /* Debug */,
-				OBJ_40 /* Release */,
+				OBJ_52 /* Debug */,
+				OBJ_53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_62 /* Build configuration list for PBXNativeTarget "AnimationPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_63 /* Debug */,
+				OBJ_64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
