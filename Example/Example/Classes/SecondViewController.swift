@@ -1,15 +1,10 @@
 //
-//  ViewController.swift
-//  Example
-//
-//  Created by Nick Tyunin on 23.08.2022.
+//  Copyright © 2022 Rosberry. All rights reserved.
 //
 
 import UIKit
 
 class SecondViewController: UIViewController {
-    // MARK: - Subviews
-
 
     // MARK: - Lifecycle
 
@@ -18,16 +13,10 @@ class SecondViewController: UIViewController {
         setup()
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
-
-    // MARK: - Actions
-
     // MARK: - Private
 
     private func setup() {
-        view.backgroundColor = .white
+        view.backgroundColor = .gray
         navigationItem.title = "Second"
     }
 }

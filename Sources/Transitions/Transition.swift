@@ -14,12 +14,18 @@ public protocol Transition {
     var toVC: To { get }
 
     static var duration: TimeInterval { get }
+    static var delay: TimeInterval { get }
+    static var options: UIView.AnimationOptions { get }
+
+    /// Use async start if you need afterScreenUpdates snapshots
+    static var useAsyncStart: Bool { get }
 
     init(fromVC: From, toVC: To, containerView: UIView)
 
     func prepare()
     func animate()
     func complete()
+    func start()
 }
 
 open class BaseTransition<From: UIViewController, To: UIViewController>: Transition {
@@ -28,11 +34,21 @@ open class BaseTransition<From: UIViewController, To: UIViewController>: Transit
         0.3
     }
 
+    open class var delay: TimeInterval {
+        0.0
+    }
+
+    open class var options: UIView.AnimationOptions {
+        []
+    }
+
+    open class var useAsyncStart: Bool {
+        false
+    }
+
     public let containerView: UIView
     public let fromVC: From
     public let toVC: To
-
-    private var snapshots: [UIView] = []
 
     required public init(fromVC: From, toVC: To, containerView: UIView) {
         self.containerView = containerView
@@ -40,8 +56,8 @@ open class BaseTransition<From: UIViewController, To: UIViewController>: Transit
         self.toVC = toVC
     }
 
-    public func makeSnapshot(from view: UIView) -> UIView {
-        guard let snapshot = view.snapshotView(afterScreenUpdates: true) else {
+    public func makeSnapshot(from view: UIView, afterScreenUpdates: Bool = false) -> UIView {
+        guard let snapshot = view.snapshotView(afterScreenUpdates: afterScreenUpdates) else {
             return .init()
         }
         snapshot.frame = view.convert(view.bounds, to: nil)
@@ -50,7 +66,6 @@ open class BaseTransition<From: UIViewController, To: UIViewController>: Transit
 
     public func add(snapshot: UIView) {
         containerView.addSubview(snapshot)
-        snapshots.append(snapshot)
     }
 
     public static func add(to provider: TransitionProvider) {
@@ -62,6 +77,10 @@ open class BaseTransition<From: UIViewController, To: UIViewController>: Transit
     }
 
     open func prepare() {
+
+    }
+
+    open func start() {
 
     }
 
@@ -90,28 +109,37 @@ open class BaseTransitioning<CustomTransition: Transition>: NSObject, UIViewCont
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let fromViewController = transitionContext.viewController(forKey: .from) as? From,
               let toViewController = transitionContext.viewController(forKey: .to) as? To,
-              let fromView = transitionContext.view(forKey: .from),
               let toView = transitionContext.view(forKey: .to) else {
+            transitionContext.completeTransition(true)
             return
         }
         let container = transitionContext.containerView
         let transition = CustomTransition(fromVC: fromViewController, toVC: toViewController, containerView: container)
-
         container.addSubview(toView)
+        fromViewController.view.setNeedsLayout()
+        fromViewController.view.layoutIfNeeded()
+        toViewController.view.setNeedsLayout()
+        toViewController.view.layoutIfNeeded()
         transition.prepare()
 
-        DispatchQueue.main.async {
-            toView.isHidden = true
-            fromView.isHidden = true
+        func start () {
+            transition.start()
+            UIView.animate(withDuration: CustomTransition.duration,
+                           delay: CustomTransition.delay,
+                           options: CustomTransition.options,
+                           animations: {
+                transition.animate()
+            }, completion: { isFinished in
+                transition.complete()
+                transitionContext.completeTransition(isFinished)
+            })
         }
 
-        UIView.animate(withDuration: CustomTransition.duration, animations: {
-            transition.animate()
-        }, completion: { isFinished in
-            toView.isHidden = false
-            fromView.isHidden = false
-            transition.complete()
-            transitionContext.completeTransition(isFinished)
-        })
+        if CustomTransition.useAsyncStart {
+            DispatchQueue.main.async(execute: start)
+        }
+        else {
+            start()
+        }
     }
 }

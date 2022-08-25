@@ -1,8 +1,5 @@
 //
-//  AppDelegate.swift
-//  Example
-//
-//  Created by Nick Tyunin on 23.08.2022.
+//  Copyright © 2022 Rosberry. All rights reserved.
 //
 
 import UIKit
@@ -19,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let viewController = ViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
 
-        FirstCustomTransition.add(to: navigationController)
+        ToSecondTransition.add(to: navigationController)
+        FromSecondTransition.add(to: navigationController)
 
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

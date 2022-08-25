@@ -21,7 +21,6 @@ public final class TransitionProvider: NSObject {
         var from = transitionsMap[fromKey] ?? [:]
         from[toKey] = transitioning
         transitionsMap[fromKey] = from
-
     }
 }
 

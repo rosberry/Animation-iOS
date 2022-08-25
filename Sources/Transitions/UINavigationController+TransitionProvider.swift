@@ -1,8 +1,5 @@
 //
-//  UINavigationController+TransitionProvider.swift
-//  Animation
-//
-//  Created by Nick Tyunin on 23.08.2022.
+//  Copyright © 2022 Rosberry. All rights reserved.
 //
 
 import UIKit
