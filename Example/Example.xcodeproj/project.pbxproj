@@ -13,7 +13,7 @@
 		015D3CC528B4DED3000C3CD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015D3CC328B4DED3000C3CD1 /* LaunchScreen.storyboard */; };
 		015D3CD228B4E01D000C3CD1 /* Animation in Frameworks */ = {isa = PBXBuildFile; productRef = 015D3CD128B4E01D000C3CD1 /* Animation */; };
 		015D3CD428B4E08C000C3CD1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D3CD328B4E08C000C3CD1 /* SecondViewController.swift */; };
-		015D3CD728B4E0BF000C3CD1 /* FirstCustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D3CD628B4E0BF000C3CD1 /* FirstCustomTransition.swift */; };
+		015D3CD728B4E0BF000C3CD1 /* SecondTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D3CD628B4E0BF000C3CD1 /* SecondTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		015D3CC628B4DED3000C3CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		015D3CCF28B4E011000C3CD1 /* Animation-iOS */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Animation-iOS"; path = ..; sourceTree = "<group>"; };
 		015D3CD328B4E08C000C3CD1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		015D3CD628B4E0BF000C3CD1 /* FirstCustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCustomTransition.swift; sourceTree = "<group>"; };
+		015D3CD628B4E0BF000C3CD1 /* SecondTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 		015D3CD528B4E0AD000C3CD1 /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
-				015D3CD628B4E0BF000C3CD1 /* FirstCustomTransition.swift */,
+				015D3CD628B4E0BF000C3CD1 /* SecondTransition.swift */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				015D3CD728B4E0BF000C3CD1 /* FirstCustomTransition.swift in Sources */,
+				015D3CD728B4E0BF000C3CD1 /* SecondTransition.swift in Sources */,
 				015D3CD428B4E08C000C3CD1 /* SecondViewController.swift in Sources */,
 				015D3CBD28B4DED2000C3CD1 /* ViewController.swift in Sources */,
 				015D3CB928B4DED2000C3CD1 /* AppDelegate.swift in Sources */,
