@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "animation-ios::Animation"
-               BuildableName = "Animation.framework"
-               BlueprintName = "Animation"
-               ReferencedContainer = "container:Animation.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "animation-ios::AnimationExample"
                BuildableName = "AnimationExample"
                BlueprintName = "AnimationExample"
@@ -54,6 +40,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "animation-ios::AnimationExample"
+            BuildableName = "AnimationExample"
+            BlueprintName = "AnimationExample"
+            ReferencedContainer = "container:Animation.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

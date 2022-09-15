@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "9999"
+   LastUpgradeVersion = "1330"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "animation-ios::Animation"
+               BlueprintIdentifier = "Animation::Animation"
                BuildableName = "Animation.framework"
                BlueprintName = "Animation"
-               ReferencedContainer = "container:Animation.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "animation-ios::AnimationExample"
-               BuildableName = "AnimationExample"
-               BlueprintName = "AnimationExample"
                ReferencedContainer = "container:Animation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -61,6 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "Animation::Animation"
+            BuildableName = "Animation.framework"
+            BlueprintName = "Animation"
+            ReferencedContainer = "container:Animation.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

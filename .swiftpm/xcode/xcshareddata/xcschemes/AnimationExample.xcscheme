@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "9999"
+   LastUpgradeVersion = "1330"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "animation-ios::Animation"
-               BuildableName = "Animation.framework"
-               BlueprintName = "Animation"
-               ReferencedContainer = "container:Animation.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "animation-ios::AnimationExample"
+               BlueprintIdentifier = "AnimationExample"
                BuildableName = "AnimationExample"
                BlueprintName = "AnimationExample"
-               ReferencedContainer = "container:Animation.xcodeproj">
+               ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -54,6 +40,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AnimationExample"
+            BuildableName = "AnimationExample"
+            BlueprintName = "AnimationExample"
+            ReferencedContainer = "container:">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -61,6 +57,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AnimationExample"
+            BuildableName = "AnimationExample"
+            BlueprintName = "AnimationExample"
+            ReferencedContainer = "container:">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
