@@ -124,7 +124,7 @@ public class UnsafeKeyframeAnimation {
     }
 
     @discardableResult
-    public func finaly(completion: @escaping () -> Void) -> UnsafeKeyframeAnimation {
+    public func finally(completion: @escaping () -> Void) -> UnsafeKeyframeAnimation {
         self.completion = completion
         return self
     }

@@ -26,7 +26,7 @@ class SecondViewController: UIViewController {
         .over(start: 0.175, end: 0.275) { viewController in
             viewController.rotateButton.alpha = 1
         }
-        .finaly { _ in
+        .finally { _ in
             print("Hello")
         }
     }()

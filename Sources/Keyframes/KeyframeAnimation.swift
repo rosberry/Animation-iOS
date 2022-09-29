@@ -126,7 +126,7 @@ public class KeyframeAnimation<Capturing: AnyObject> {
     }
 
     @discardableResult
-    public func finaly(completion: @escaping (Capturing) -> Void) -> KeyframeAnimation {
+    public func finally(completion: @escaping (Capturing) -> Void) -> KeyframeAnimation {
         self.completion = completion
         return self
     }
