@@ -32,7 +32,9 @@ class ViewController: UIViewController {
 
     @objc private func secondViewControllerButtonPressed() {
         let viewController = SecondViewController()
-        navigationController?.pushViewController(viewController, animated: true)
+        viewController.modalPresentationStyle = .custom
+        viewController.transitioningDelegate = navigationController?.transitionProvider
+        present(viewController, animated: true)
     }
 
     // MARK: - Private

@@ -9,7 +9,6 @@ class SecondViewController: UIViewController {
 
     private lazy var rotateAnimation: KeyframeAnimation = {
         .init(using: SecondViewController.self, duration: 0.3)
-        .options(.repeat)
         .animationOptions(.curveEaseOut)
         .next(duration: 0.08, times: 3) { viewController, index in
             viewController.rotateButton.transform = .init(rotationAngle: 2 * .pi / 3 * .init(index + 1))
@@ -26,14 +25,14 @@ class SecondViewController: UIViewController {
         .over(start: 0.175, end: 0.275) { viewController in
             viewController.rotateButton.alpha = 1
         }
-        .finally { _ in
-            print("Hello")
+        .finally { viewController in
+            viewController.dismiss(animated: true)
         }
     }()
 
     private lazy var rotateButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Rotate", for: .normal)
+        button.setTitle("Close", for: .normal)
         button.addTarget(self, action: #selector(rotateButtonPressed), for: .touchUpInside)
         return button
     }()

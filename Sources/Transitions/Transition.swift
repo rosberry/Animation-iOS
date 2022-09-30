@@ -107,14 +107,14 @@ open class BaseTransitioning<CustomTransition: Transition>: NSObject, UIViewCont
     }
 
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromViewController = transitionContext.viewController(forKey: .from) as? From,
-              let toViewController = transitionContext.viewController(forKey: .to) as? To,
-              let toView = transitionContext.view(forKey: .to) else {
+        guard let (fromViewController, toViewController) = viewControllers(from: transitionContext),
+              let toView = toViewController.view else {
             transitionContext.completeTransition(true)
             return
         }
         let container = transitionContext.containerView
         let transition = CustomTransition(fromVC: fromViewController, toVC: toViewController, containerView: container)
+        let toSuperview = toView.superview
         container.addSubview(toView)
         fromViewController.view.setNeedsLayout()
         fromViewController.view.layoutIfNeeded()
@@ -130,6 +130,7 @@ open class BaseTransitioning<CustomTransition: Transition>: NSObject, UIViewCont
                            animations: {
                 transition.animate()
             }, completion: { isFinished in
+                toSuperview?.addSubview(toView)
                 transition.complete()
                 transitionContext.completeTransition(isFinished)
             })
@@ -141,5 +142,23 @@ open class BaseTransitioning<CustomTransition: Transition>: NSObject, UIViewCont
         else {
             start()
         }
+    }
+
+    private func viewControllers(from transitionContext: UIViewControllerContextTransitioning) -> (From, To)? {
+        if let fromViewController = transitionContext.viewController(forKey: .from) as? From,
+           let toViewController = transitionContext.viewController(forKey: .to) as? To {
+            return (fromViewController, toViewController)
+        }
+        if let toViewController = transitionContext.viewController(forKey: .to) as? To,
+           let navigationController = transitionContext.viewController(forKey: .from) as? UINavigationController,
+           let fromViewController = navigationController.viewControllers.last as? From {
+            return (fromViewController, toViewController)
+        }
+        if let navigationController = transitionContext.viewController(forKey: .to) as? UINavigationController,
+           let toViewController = navigationController.viewControllers.last as? To,
+           let fromViewController = transitionContext.viewController(forKey: .from) as? From {
+            return (fromViewController, toViewController)
+        }
+        return nil
     }
 }
