@@ -44,9 +44,20 @@ extension TransitionProvider: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController,
                                     presenting: UIViewController,
                                     source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let fromKey = String(describing: type(of: source))
+        var fromKey = String(describing: type(of: source))
         let toKey = String(describing: type(of: presented))
-        return transitionsMap[fromKey]?[toKey]
+        var transition = transitionsMap[fromKey]?[toKey]
+        if transition == nil {
+            fromKey = String(describing: type(of: presenting))
+            transition = transitionsMap[fromKey]?[toKey]
+        }
+        if transition == nil,
+           let navigationController = (presented as? UINavigationController) ?? (source as? UINavigationController),
+           let presenting = navigationController.viewControllers.last {
+            fromKey = String(describing: type(of: presenting))
+            transition = transitionsMap[fromKey]?[toKey]
+        }
+        return transition
     }
 
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
